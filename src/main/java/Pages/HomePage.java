@@ -11,6 +11,7 @@ public class HomePage {
 
     WebDriver driver;
 
+    //constructor function
     public HomePage(WebDriver driver)
     {
         this.driver=driver;
@@ -18,6 +19,7 @@ public class HomePage {
 
     }
 
+    //Lc waikiki page and wait functions
     public void getPage()
     {
 
@@ -29,6 +31,7 @@ public class HomePage {
 
     }
 
+    //clicking Accessory button
     public void getAccessory()
     {
 
@@ -37,6 +40,7 @@ public class HomePage {
 
     }
 
+    //checking Accessory page
     public void checkAccessoryPage()
     {
         String checkAccessory= driver.getTitle();
@@ -49,17 +53,18 @@ public class HomePage {
             System.out.println("sayfa yüklenemedi.");
         }
     }
-
+    //clicking Man Products button
     public void goBoyPage()
     {
         WebElement checkAccessory=driver.findElement(By.cssSelector("body > div:nth-child(11) > div:nth-child(1) > div:nth-child(8) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > a:nth-child(3)"));
         checkAccessory.click();
     }
 
+    //checking Man Products page
     public void checkBoyPage()
     {
+        //printing title to the console
         String checkBoypage= driver.getTitle();
-        // Assert.assertEquals(checkAccessory,"kadın erkek çocuk bebek aksesuar - LC Waikiki");
         if (checkBoypage.contains("Erkek Aktif")) {
             System.out.println(checkBoypage);
         }

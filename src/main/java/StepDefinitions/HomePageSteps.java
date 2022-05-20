@@ -8,8 +8,11 @@ import io.cucumber.java.en.When;
 
 public class HomePageSteps {
 
+    //driver setups
     WebDriver driver = DriverFactory.getDriver();
     HomePage homePage = new HomePage(driver);
+
+        //Cucumber setups
 
         @Given("Siteye girilir")
         public void siteyeGirilir () {
